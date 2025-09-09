@@ -148,12 +148,12 @@ if st.button("🔮 Generuj pomysły na kolorowanki", type="primary"):
 
 ideas = st.session_state.get("ideas", [])
 if ideas:
-    st.subheader("Pomysły i prompty (edytowalne) – wybierz, którego użyć")
+    st.subheader("To są prompty i pomysłyy edytowalne – możesz teraz wybrać, którego chesz użyć")
     titles = [f"{i+1}. {it['title']}" for i, it in enumerate(ideas)]
-    choice_idx = st.selectbox("Który prompt wykorzystać?", options=list(range(len(titles))), format_func=lambda i: titles[i])
+    choice_idx = st.selectbox("Który prompt chcesz wykorzystać?", options=list(range(len(titles))), format_func=lambda i: titles[i])
 
     # Edycja wybranego
-    with st.expander("✏️ Edytuj wybrany prompt"):
+    with st.expander("✏️ Edytuj prompt który wybrałeś"):
         sel = ideas[choice_idx]
         new_title = st.text_input("Tytuł", value=sel["title"], key="sel_title")
         new_prompt = st.text_area("Prompt", value=sel["prompt"], key="sel_prompt", height=120)
