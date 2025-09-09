@@ -56,7 +56,7 @@ def llm_generate_ideas(theme: str) -> List[Dict[str, str]]:
             {"role": "user", "content": (
                 "Zaprojektuj 12 pomysłów na kolorowanki dla dzieci na temat: '" + theme + "'. "
                 "Każdy pomysł zamień w krótki PROMPT. Wymogi: czarno-białe, czyste kontury, brak cieniowania, białe tło, "
-                "prosty styl, linie 2–5 px, 1024×1024, centralny kadr, brak tekstu/napisów. Zwróć WYŁĄCZNIE JSON w schemacie "
+                "prosty styl, linie 2–5 px, centralny kadr, brak tekstu/napisów. Zwróć WYŁĄCZNIE JSON w schemacie "
                 "{\"items\":[{\"title\":\"string\",\"prompt\":\"string\"}]}"
             )}
         ],
@@ -125,7 +125,7 @@ if "ideas" not in st.session_state:
 if "generated_images" not in st.session_state:
     st.session_state["generated_images"] = []
 
-st.caption("Sposób działania aplikacji: 1. wybierz temat → powstaje lista promptów → wybierasz jedne pomysł → ustalasz liczbę wariantów → aplikacja generuje obrazki → pobieranie kolorowanek")
+st.caption("Sposób działania aplikacji: 1. wybierz temat → powstaje lista promptów → wybierasz jeden pomysł → ustalasz liczbę wariantów → aplikacja generuje obrazki → pobieranie kolorowanek")
 
 # ========= UI – v1: temat → lista promptów =========
 st.header("Wpisz temat i wygeneruj propozycje promptów")
