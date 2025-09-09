@@ -13,10 +13,10 @@ sbar = st.sidebar
 sbar.title("⚙️ Ustawienia kolorowanek")
 
 # ========= Config =========
-with sbar.expander("Zaawansowane (opcjonalnie)"):
+with sbar.expander("Podaj klucz do OPENAI API"):
     BASE_URL = st.session_state.get("BASE_URL", "https://api.openai.com/v1")
     OPENAI_API_KEY = st.text_input("🔑 Podaj swój OPENAI_API_KEY aby wygenerować kolorowankę", type="password")
-    TEXT_MODEL = st.text_input("🧠 (LLM) model do pomysłów", value=st.session_state.get("TEXT_MODEL", "gpt-4o-mini"))
+    #TEXT_MODEL = st.text_input("🧠 (LLM) model do pomysłów", value=st.session_state.get("TEXT_MODEL", "gpt-4o-mini"))
 
 with sbar.expander("Zaawansowane (opcjonalnie)", expanded=False):
     OPENAI_ORG_ID = st.text_input("🏢 OpenAI Organization ID (org_…)", value=st.session_state.get("OPENAI_ORG_ID", ""))
