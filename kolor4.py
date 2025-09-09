@@ -164,7 +164,7 @@ if ideas:
 st.header("Wybierz liczbę rysunków do wygenerowania z wybranego promptu")
 col1, col2, col3 = st.columns([1,1,1])
 with col1:
-    size_label = st.selectbox("Rozmiar kolorowanki", [512, 1024], index=1)
+    size_label = st.selectbox("Rozmiar kolorowanki", [1024], index=1)
 with col2:
     quality = st.selectbox("Jakość kolorowanki", ["low", "medium", "high", "auto"], index=2)
 with col3:
